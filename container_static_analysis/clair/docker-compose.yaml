@@ -1,0 +1,24 @@
+version: '3.3'
+
+services:
+  clair_db:
+    container_name: clair_db
+    image: arminc/clair-db:2020-04-11
+    ports:
+      - "5432:5432"
+    networks:
+    - clair_nw
+
+  clair_api:
+    container_name: clair_api
+    image: arminc/clair-local-scan:v2.1.0_8cb406fdb7ae7dc6fed05032b036a365391aaf42
+    links:
+      - "clair_db:postgres"
+    ports:
+      - "6060:6060"
+    networks:
+    - clair_nw
+
+networks:
+  clair_nw:
+
