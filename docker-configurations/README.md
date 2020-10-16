@@ -12,7 +12,7 @@ Surprisingly, [docker-bench-security](https://github.com/docker/docker-bench-sec
 
 ```console
 echo "Copying files to /tmp ..."
-cp /usr/local/bin/*.json /tmp
+cp /usr/local/bin/docker-bench-security.sh.log.json /tmp
 ```
 
 3. Building the docker image
