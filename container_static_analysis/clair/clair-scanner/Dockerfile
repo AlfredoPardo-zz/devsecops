@@ -1,4 +1,4 @@
-FROM golang:1.14.2-buster
+FROM golang:1.15.3-buster 
 
 RUN curl -vv https://raw.githubusercontent.com/golang/dep/master/install.sh  | sh
 
@@ -10,4 +10,4 @@ RUN make ensure; make build
 
 EXPOSE 9279
 
-ENTRYPOINT ["./clair"]
+ENTRYPOINT ["./clair-scanner"]
