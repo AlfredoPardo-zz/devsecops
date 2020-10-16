@@ -26,7 +26,7 @@
   
 2. Identifying the Clair Scanner IP Address
 
-> $ CLAIR_SCANNER_IP_ADDRESS="$(docker run --entrypoint=/bin/bash --rm clair_scanner -c "hostname -i")"
+> $ CLAIR_SCANNER_IP_ADDRESS=**enter-your-local-ip-address-here"**
 
 > $ echo $CLAIR_SCANNER_IP_ADDRESS
 
