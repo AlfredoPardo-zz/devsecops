@@ -22,6 +22,24 @@ $ sudo ./kube-bench master --json
 
 $ sudo ./kube-bench node --json
 
+### Submit Kube-bench Information to Apache Superset (PostgreSQL)
+
+1. Export environment variables
+
+> export POSTGRES_USERNAME="superset"
+
+> export POSTGRES_PASSWORD="superset"
+
+> export POSTGRES_HOST="127.0.0.1"
+
+> export POSTGRES_DATABASE="superset"
+
+2. Make sure you have the required packages installed (requirements.txt)
+
+3. Run the script
+
+> python3 kube-bench-to-superset.py
+
 ----------
 
 # [Kube-hunter](https://github.com/aquasecurity/kube-hunter)
